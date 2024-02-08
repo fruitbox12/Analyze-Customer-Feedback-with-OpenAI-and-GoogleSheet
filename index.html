@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - field-sizing: content 🤙 [Chrome Canary]</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="input-controls">
+      <textarea
+        spellcheck="false"
+        name="textarea"
+        id="textarea"
+        placeholder="Type your message..."
+      ></textarea>
+      <div class="actions">
+        <button>
+          <span class="sr-only">Spec resolution</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M18.375 12.739l-7.693 7.693a4.5 4.5 0 01-6.364-6.364l10.94-10.94A3 3 0 1119.5 7.372L8.552 18.32m.009-.01l-.01.01m5.699-9.941l-7.81 7.81a1.5 1.5 0 002.112 2.13"
+            />
+          </svg>
+        </button>
+        <button>
+          <span class="sr-only">Attach</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"
+              clip-rule="evenodd"
+            />
+            <path
+              d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z"
+            />
+          </svg>
+        </button>
+        <button>
+          <span class="sr-only">Use Completions</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button>
+          <span class="sr-only">Use Completions</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.5 3.798v5.02a3 3 0 01-.879 2.121l-2.377 2.377a9.845 9.845 0 015.091 1.013 8.315 8.315 0 005.713.636l.285-.071-3.954-3.955a3 3 0 01-.879-2.121v-5.02a23.614 23.614 0 00-3 0zm4.5.138a.75.75 0 00.093-1.495A24.837 24.837 0 0012 2.25a25.048 25.048 0 00-3.093.191A.75.75 0 009 3.936v4.882a1.5 1.5 0 01-.44 1.06l-6.293 6.294c-1.62 1.621-.903 4.475 1.471 4.88 2.686.46 5.447.698 8.262.698 2.816 0 5.576-.239 8.262-.697 2.373-.406 3.092-3.26 1.47-4.881L15.44 9.879A1.5 1.5 0 0115 8.818V3.936z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button>Send</button>
+      </div>
+    </div>
+
+    <a href="">
+      <span class="sr-only">Check on X</span>
+      <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>X</title>
+        <path
+          d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"
+        />
+      </svg>
+    </a>
+
+    <div class="controls">
+      <label for="horizontal">horizontal</label>
+      <input id="horizontal" type="checkbox" />
+      <label for="constrain">constrain</label>
+      <input id="constrain" type="checkbox" />
+      <label for="min">min-height (lh)</label>
+      <input id="min" type="range" min="1" max="10" value="1" />
+      <label for="max">max-height (lh)</label>
+      <input id="max" type="range" min="5" max="20" value="10" />
+    </div>
+   <style>
+	body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title {
+	 position: fixed;
+	 bottom: 10%;
+	 left: 0;
+	 width: 100%;
+	 text-align: center;
+	 font-family: sans-serif;
+}
+
+#globe-3d, #globe-2d-overlay, #globe-popup-overlay, .globe-popup {
+    display: block;
+    position: absolute;
+	
+}
+
+#globe-2d-overlay, #globe-popup-overlay {
+    pointer-events: auto;
+
+	    color: #00ffe7;
+
+}
+
+.globe-popup {
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    color: #00ffe7;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 3px;
+    filter: drop-shadow(0px 0px 3px #00ffcc);
+}
+</style>
+<div class="page">   
+
+    <div class="globe-wrapper">
+        <canvas id="globe-3d"></canvas><div class="screen-overlay"></div> 
+        <canvas id="globe-2d-overlay"></canvas>
+        <div id="globe-popup-overlay">
+            <div class="globe-popup"></div>
+        </div>
+    </div>
+</div>
+
+<script type="x-shader/x-fragment" id="fragment-shader-map">
+    uniform sampler2D u_map_tex;
+
+    varying float vOpacity;
+    varying vec2 vUv;
+
+   void main() {
+    vec3 color = texture2D(u_map_tex, vUv).rgb;
+    // Reduce the base color's intensity to darken the globe
+    color *= 0.8;
+
+    // Calculate the gradient based on the distance from the center
+    float distance = length(gl_PointCoord.xy - vec2(0.5));
+    color = mix(color, vec3(0.25, 0.88, 0.82), 1.0 - distance); // Mix turquoise based on distance
+
+    // Adjust the dot to create a more prominent glow effect
+    float dot = 1.0 - smoothstep(0.3, 0.5, distance);
+
+    // Use the modified color and dot for the final color, incorporating the opacity
+    gl_FragColor = vec4(color, dot * vOpacity);
+}
+
+</script>
+
+<script type="x-shader/x-vertex" id="vertex-shader-map">
+    uniform sampler2D u_map_tex;
+    uniform float u_dot_size;
+    uniform float u_time_since_click;
+    uniform vec3 u_pointer;
+
+    #define PI 3.14159265359
+
+    varying float vOpacity;
+    varying vec2 vUv;
+
+    void main() {
+
+        vUv = uv;
+
+        // mask with world map
+        float visibility = step(.2, texture2D(u_map_tex, uv).r);
+        gl_PointSize = visibility * u_dot_size;
+
+        // make back dots semi-transparent
+        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+        vOpacity = (1. / length(mvPosition.xyz) - .7);
+        vOpacity = clamp(vOpacity, .03, 1.);
+
+        // add ripple
+        float t = u_time_since_click - .1;
+        t = max(0., t);
+        float max_amp = .15;
+        float dist = 1. - .5 * length(position - u_pointer); // 0 .. 1
+        float damping = 1. / (1. + 20. * t); // 1 .. 0
+        float delta = max_amp * damping * sin(5. * t * (1. + 2. * dist) - PI);
+        delta *= 1. - smoothstep(.8, 1., dist);
+        vec3 pos = position;
+        pos *= (1. + delta);
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
+    }
+</script>
+<style>
+	body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+	background: #060606;
+}
+
+.page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+	 position: fixed;
+	 bottom: 10%;
+	 left: 0;
+	 width: 100%;
+	 text-align: center;
+	 font-family: sans-serif;
+}
+
+#globe-3d, #globe-2d-overlay, #globe-popup-overlay, .globe-popup {
+    display: block;
+    position: absolute;
+}
+
+#globe-2d-overlay, #globe-popup-overlay {
+    pointer-events: auto;
+}
+
+.globe-popup {
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    color: #00ffcc;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    font-size: 15px;
+    border-radius: 3px;
+    filter: drop-shadow(0px 0px 3px #555555);
+}
+</style>
+
+
+<div id="blob"></div>
+<div id="blur"><div class="grid">
+  <svg class="grid-svg" xmlns="http://www.w3.org/2000/svg" width="982" height="786" viewBox="0 0 982 786" fill="none">
+    <path fill-rule="evenodd" clip-rule="evenodd" d="M490 401V537H348.5V401H490ZM490 785.5V676H348.5V785.5H347.5V676H206V785.5H205V676H63.5V785.5H62.5V676H0V675H62.5V538H0V537H62.5V401H0V400H62.5V258H0V257H62.5V116H0V115H62.5V0H63.5V115L205 115V0H206V115L347.5 115V0H348.5V115H490V0H491V115L627.5 115V0H628.5V115H765V0H766V115L902.5 115V0H903.5V115H982V116H903.5V257H982V258H903.5V400H982V401H903.5V537H982V538H903.5V675H982V676H903.5V785.5H902.5V676H766V785.5H765V676H628.5V785.5H627.5V676H491V785.5H490ZM902.5 675V538H766V675H902.5ZM902.5 537V401H766V537H902.5ZM902.5 400V258H766V400H902.5ZM902.5 257V116L766 116V257H902.5ZM627.5 675H491V538H627.5V675ZM765 675H628.5V538H765V675ZM348.5 675H490V538H348.5V675ZM347.5 538V675H206V538H347.5ZM205 538V675H63.5V538H205ZM765 537V401H628.5V537H765ZM765 400V258H628.5V400H765ZM765 257V116H628.5V257H765ZM347.5 401V537H206V401H347.5ZM205 401V537H63.5V401H205ZM627.5 401V537H491V401H627.5ZM627.5 116L491 116V257H627.5V116ZM627.5 258H491V400H627.5V258ZM63.5 257V116L205 116V257H63.5ZM63.5 400V258H205V400H63.5ZM206 116V257H347.5V116L206 116ZM348.5 116V257H490V116H348.5ZM206 400V258H347.5V400H206ZM348.5 258V400H490V258H348.5Z" fill="url(#paint0_radial_1_8)" />
+    <defs>
+      <radialGradient id="paint0_radial_1_8" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(491 392.75) rotate(90) scale(513.25 679.989)">
+        <stop stop-color="white" stop-opacity="0.2" />
+        <stop offset="1" stop-color="#000" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+  </svg></div>
+<div class="page">
+
+  <div class="meta-link">  
+    <span class="label">Glowy Blob Effect</span>
+    <span class="dot">·</span>
+    <a class="source" href="https://www.poppr.be" target="_blank">
+      <i class="fa-solid fa-link"></i>
+    </a>
+    <span class="dot">·</span>
+    <a class="youtube" href="https://youtu.be/kySGqoU7X-s" target="_blank">
+      <i class="fa-brands fa-youtube"></i>
+    </a>
+  </div>    <div class="globe-wrapper">
+        <canvas id="globe-3d"></canvas>
+        <canvas id="globe-2d-overlay"></canvas>
+        <div id="globe-popup-overlay">
+            <div class="globe-popup"></div>
+        </div>
+    </div>
+</div>
+<script type="x-shader/x-fragment" id="fragment-shader-map">
+    uniform sampler2D u_map_tex;
+
+    varying float vOpacity;
+    varying vec2 vUv;
+
+   void main() {
+    vec3 color = texture2D(u_map_tex, vUv).rgb;
+    // Reduce the base color's intensity to darken the globe
+    color *= 0.8;
+
+    // Calculate the gradient based on the distance from the center
+    float distance = length(gl_PointCoord.xy - vec2(0.5));
+    color = mix(color, vec3(0.25, 0.88, 0.82), 1.0 - distance); // Mix turquoise based on distance
+
+    // Adjust the dot to create a more prominent glow effect
+    float dot = 1.0 - smoothstep(0.3, 0.5, distance);
+
+    // Use the modified color and dot for the final color, incorporating the opacity
+    gl_FragColor = vec4(color, dot * vOpacity);
+}
+
+</script>
+
+<script type="x-shader/x-vertex" id="vertex-shader-map">
+    uniform sampler2D u_map_tex;
+    uniform float u_dot_size;
+    uniform float u_time_since_click;
+    uniform vec3 u_pointer;
+
+    #define PI 3.14159265359
+
+    varying float vOpacity;
+    varying vec2 vUv;
+
+    void main() {
+
+        vUv = uv;
+
+        // mask with world map
+        float visibility = step(.2, texture2D(u_map_tex, uv).r);
+        gl_PointSize = visibility * u_dot_size;
+
+        // make back dots semi-transparent
+        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+        vOpacity = (1. / length(mvPosition.xyz) - .7);
+        vOpacity = clamp(vOpacity, .03, 1.);
+
+        // add ripple
+        float t = u_time_since_click - .1;
+        t = max(0., t);
+        float max_amp = .15;
+        float dist = 1. - .5 * length(position - u_pointer); // 0 .. 1
+        float damping = 1. / (1. + 20. * t); // 1 .. 0
+        float delta = max_amp * damping * sin(5. * t * (1. + 2. * dist) - PI);
+        delta *= 1. - smoothstep(.8, 1., dist);
+        vec3 pos = position;
+        pos *= (1. + delta);
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.);
+    }
+</script>
+<!-- partial -->
+  <script type="module" src="./script.js"></script>
+
+</body>
+</html>
